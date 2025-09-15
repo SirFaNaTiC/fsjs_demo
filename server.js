@@ -7,16 +7,17 @@ const port = process.env.PORT || 3000
 
 // Inclusion du module prédéfini de Node.js permettant d'exécuter un serveur http
 const http = require('http')
+// Inclusion de l'application Express
+const app = require('./app');
 
-// Ce serveur très simple reverra toujours la même réponse :
-// - un code http 200
-// - un header spécifiant l'encodage de la réponse
-// - le message "Le serveur Node.js dit <b>bonjour</b>"
-const server = http.createServer((req, res) =>{
-    res.statusCode = 200;
-    res.setHeader('Content-Type', 'text/html;charset=utf-8');
-    res.end("Le serveur Node.js dit <b>bonjour</b>")
-})
+// Création du serveur http avec gestion "basique" des requêtes
+// const server = http.createServer((req, res) =>{
+//     res.statusCode = 200;
+//     res.setHeader('Content-Type', 'text/html;charset=utf-8');
+//     res.end("Le serveur Node.js dit <b>bonjour</b>")
+// });
+
+const server = http.createServer(app);
 
 // Démarrage de l'écoute des requêtes sur le port indiqué
 server.listen(port,()=>{
