@@ -1,0 +1,20 @@
+{
+  "name": "cours_node",
+  "version": "1.0.0",
+  "description": "",
+  "homepage": "https://github.com/SirFaNaTiC/Cours_Node.js#readme",
+  "bugs": {
+    "url": "https://github.com/SirFaNaTiC/Cours_Node.js/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SirFaNaTiC/Cours_Node.js.git"
+  },
+  "license": "ISC",
+  "author": "Nathan",
+  "type": "commonjs",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}
