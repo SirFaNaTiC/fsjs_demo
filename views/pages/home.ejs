@@ -1,0 +1,23 @@
+<%- include('../partials/head') %>
+
+<h1>Ceci est une page en EJS</h1>
+
+<h1>
+    Bonjour
+    <% if (user.sex == 'femme' && user.nickname == '') { %>
+        femme
+    <% } if (user.sex == 'homme' && user.nickname == '') { %>
+        homme
+    <% } if (user.sex == null && user.nickname == '') { %>
+        Tu n'est personne 
+    <% } if (user.nickname != '' && user.sex == null) { %>
+        <%= user.nickname %>
+    <% } if (user.nickname != '' && user.sex == 'homme') { %>
+        Mr <%= user.nickname %>
+    <% } if (user.nickname != '' && user.sex == 'femme') { %>
+        Mme <%= user.nickname %>
+    <% } %>
+</h1>
+
+
+<%- include('../partials/foot') %>
