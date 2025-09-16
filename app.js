@@ -22,6 +22,11 @@ app.use(express.static(path.join(__dirname,'public')));
 app.set('view engine','ejs'); // moteur de template
 app.set('views', path.join(__dirname,'views')); // dossier des vues
 
+//EJS
+const expressLayouts = require('express-ejs-layouts');
+app.use(expressLayouts);
+app.set('layout','./layouts/layout'); // layout par défaut
+
 //Middleware
 // 1er middleware : ex. d'affichage d'informations dans la console
 // app.use((req,res,next)=>{
