@@ -6,7 +6,7 @@
         femme
     <% } if (user.sex == 'homme' && user.nickname == '') { %>
         homme
-    <% } if (user.sex == null && user.nickname == '') { %>
+    <% } if (user.sex == '' && user.nickname == '') { %>
         Tu n'est personne 
     <% } if (user.nickname != '' && user.sex == null) { %>
         <%= user.nickname %>
